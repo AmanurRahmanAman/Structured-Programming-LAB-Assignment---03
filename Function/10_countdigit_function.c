@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int countDigits(int n)
+{
+    int count = 0;
+
+    if (n == 0)
+        return 1;
+
+    if (n < 0)
+        n = -n;
+
+    while (n != 0)
+    {
+        count++;
+        n = n / 10;
+    }
+
+    return count;
+}
+
+int main()
+{
+    int n;
+
+    scanf("%d", &n);
+
+    printf("%d\n", countDigits(n));
+
+    return 0;
+}
